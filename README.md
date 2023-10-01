@@ -107,6 +107,17 @@ https://github.com/GeekyPS/Automata/assets/97830682/e3434df1-c8af-4f97-b618-9a48
    <li>Presently, the answers to short answer questions is only hello + name_of_the_field, and that of checkbox type is first option only</li>
 </ul>  
 
+## Join us on social media
+
+[Discord](https://discord.gg/djNKYdge2a) | [Facebook](https://www.facebook.com/swciitg/) | [LinkedIn](https://www.linkedin.com/company/student-s-web-committee-iitg/mycompany/)
+# 🐛 Bug Reporting
+#### Feel free to [open an issue](https://github.com/swciitg/one-stop-2021/issues) on GitHub if you find any bug.
+
+<br />
+
+# ⭐ Feature Suggestion
+#### Feel free to [open an issue](https://github.com/swciitg/one-stop-2021/issues) on GitHub if you have feature idea to be added 🙌.
+
 
 
 
