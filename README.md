@@ -50,26 +50,19 @@ Here's an elaboration on how this system works:
 
 # :rocket: Setting up the Application
 
-### 1: Clone the repository
+`Note:`Open terminal window in the application folder, ensure npm is installed on your system , instruction to which could be found <a href="https://nodejs.org/en/download">here</a>
 
-<pre>git clone https://github.com/ssobehtmo26/automata_proj</pre>
-
-### 2: Specifying the path in the terminal
-
-<pre>cd location_of_the_folder </pre>
-
-
-### 3: Getting the Packages
+### 1: Getting the Packages
 
 <pre>npm install</pre>
 
 `Note:` Before starting the server, make sure a `.env` file is made as per the sample provided in .env.sample file
 
-## 4: Running the Application
+## 2: Running the Application
 
 <pre>npm start </pre>
 
-## 5: Interacting with the application 
+## 3: Interacting with the application 
 
 <pre> https://localhost:PORT_NUMBER </pre>
    
