@@ -92,7 +92,7 @@ Here's an elaboration on how this system works:
 <img width="1391" alt="Screenshot 2023-09-30 at 12 38 19 AM" src="https://github.com/ssobehtmo26/automata_proj/assets/95176555/34a01176-c899-4c98-b1f6-678d0a120f5c">
 
 # :clapper: Video Demonstration
-https://github.com/GeekyPS/Automata/assets/97830682/5941ea38-7bc8-404f-b9d1-a668a6071eea
+https://github.com/GeekyPS/Automata/assets/97830682/e3434df1-c8af-4f97-b618-9a484883c05c
 
 # :level_slider: Limitations
 
