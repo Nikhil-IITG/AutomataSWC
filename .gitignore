@@ -1,0 +1,25 @@
+# Node.js
+node_modules/
+
+# Output files
+dist/
+
+# IDE and editor specific files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Build process
+build/
+
+# Dependency directories
+jspm_packages/
+
+# macOS
+.DS_Store
