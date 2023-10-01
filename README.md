@@ -45,7 +45,7 @@ Here's an elaboration on how this system works:
 - <img src= "https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" width = "20"/> Typescript: TypeScript is preferred for web automation with Puppeteer due to its strong typing, which catches errors before runtime, enhancing code reliability. It offers excellent IDE support, making code development more efficient, and its self-documented nature improves code readability and understanding. TypeScript's static typing system also aids in error checking, resulting in more stable code
 -  <img src= "https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original.svg" width = "20"/> Node: Node leverage the power of TypeScript's static typing to build robust server-side APIs, utilizing npm's vast library
 - <img src= "https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png" width = "20"/> Puppeteer - The "puppeteer" package in npm is a Node.js library that provides a high-level API over the Chrome DevTools Protocol, which allows you to control a headless (or non-headless) version of the Google Chrome or Chromium browser. It's often used for tasks related to web scraping, automating tasks in web applications, taking screenshots, generating PDFs, and running automated tests in a browser environment.
-- <img src= "https://github.com/devicons/devicon/blob/master/icons/yarn/yarn-original.svg" width = "20"/> Yarn: It is a package manager similar to npm , but is much faster in installing large packages
+
 
 
 # :rocket: Setting up the Application
@@ -58,17 +58,16 @@ Here's an elaboration on how this system works:
 
 <pre>cd location_of_the_folder </pre>
 
-`Note`: Before proceeding to the next step, make sure yarn is installed on your system. The steps to which could be found <a href="https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable">here</a>.
 
 ### 3: Getting the Packages
 
-<pre>yarn</pre>
+<pre>npm install</pre>
 
 `Note:` Before starting the server, make sure a `.env` file is made as per the sample provided in .env.sample file
 
 ## 4: Running the Application
 
-<pre>yarn start </pre>
+<pre>npm start </pre>
 
 ## 5: Interacting with the application 
 
