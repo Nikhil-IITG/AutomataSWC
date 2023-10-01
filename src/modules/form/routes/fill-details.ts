@@ -26,7 +26,7 @@ router.post(
 
       await deleteFiles(); // deleting old images
 
-      const browser = await puppeteer.launch({ headless: "new" });
+      const browser = await puppeteer.launch({ headless: false });
       const page = await browser.newPage();
       await page.goto(link);
       await page.setViewport({ width: 1920, height: 1080 });
