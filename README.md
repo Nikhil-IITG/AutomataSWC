@@ -50,8 +50,8 @@ Here's an elaboration on how this system works:
 
 # :rocket: Setting up the Application
 
-`Note:`Open terminal window in the application folder, ensure npm is installed on your system , instruction to which could be found <a href="https://nodejs.org/en/download">here</a>
-
+`Note`:Open terminal window in the application folder, ensure npm is installed on your system , instruction to which could be found <a href="https://nodejs.org/en/download">here</a>
+`Note`:Also make sure an instance of chrome/chromium is installed on device running the server, it is needed by pupeteer
 ### 1: Getting the Packages
 
 <pre>npm install</pre>
