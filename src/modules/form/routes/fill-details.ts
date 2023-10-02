@@ -1,13 +1,28 @@
 import express, { NextFunction, Request, Response } from "express";
 import { body, validationResult } from "express-validator";
-import puppeteer from "puppeteer";
+import puppeteer, { Page } from "puppeteer";
 import { Constants } from "../utils/constants";
 import { delay } from "../utils/delay";
 import { validateRequest } from "../../../middlewares/validate-request";
 import { deleteFiles } from "../../../utils/delete-files";
 import { getImageUrl } from "../utils/attach-url";
-
 const router = express.Router();
+
+const waitForSelectorwithRetry = async ( page : Page  , selector : string , maxRetries: number , delaytime:number ):Promise<void> =>{
+  let retries = 0;
+  while (retries < maxRetries) {
+    try {
+      await page.waitForSelector(selector, { timeout: delaytime });
+      return;
+    } catch (error) {
+      retries++;
+      await page.waitForTimeout(delaytime);
+    }
+  }
+  throw new Error(`Element ${selector} not found after ${maxRetries} retries.`);
+
+
+}
 
 router.post(
   "/api/fill-details",
@@ -31,9 +46,9 @@ router.post(
       await page.goto(link);
       await page.setViewport({ width: 1920, height: 1080 });
 
-      await delay(500);
+      await delay(100);
 
-      await page.waitForSelector(Constants.divSelector);
+      await waitForSelectorwithRetry(page, Constants.divSelector, 3, 100);
       const numElements = await page.evaluate((divSelector: string) => {
         return document.querySelectorAll(divSelector).length;
       }, Constants.divSelector);
@@ -61,29 +76,25 @@ router.post(
         );
 
         const element = await page.$(inputSelector);
-        await delay(500);
+        await delay(100);
 
         if (element) {
-          await page.waitForSelector(inputSelector);
-          await delay(500);
+          await waitForSelectorwithRetry(page, inputSelector, 3, 100);
           await page.type(inputSelector, `hello ${titles[x]}`, { delay: 10 });
         } else {
           inputSelector = Constants.checkBoxSelector.replace(
             "$",
             (x + 1).toString()
           );
-          await page.waitForSelector(inputSelector);
-          await delay(500);
+          await waitForSelectorwithRetry(page, inputSelector, 3, 100);
           await page.click(inputSelector);
         }
 
         await page.screenshot({ path: `static/images/fields${x + 1}.jpg` });
       }
 
-      await page.waitForSelector(Constants.submitSelector);
-      await page.click(Constants.submitSelector);
-
-      await delay(600);
+      await waitForSelectorwithRetry(page, Constants.submitSelector, 3, 100);
+       await page.click(Constants.submitSelector);
 
       await page.screenshot({
         path: "static/images/finalSubmission.jpg",
