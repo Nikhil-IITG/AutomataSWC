@@ -64,7 +64,7 @@ Here's an elaboration on how this system works:
 
 ## 3: Interacting with the application 
 
-<pre> https://localhost:PORT_NUMBER </pre>
+<pre> http://localhost:PORT_NUMBER </pre>
    
 `Note`:The application after starting the server could be accessed at whichever port it was configured to run on, in the env file.
 
